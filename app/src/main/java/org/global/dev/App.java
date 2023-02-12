@@ -1,4 +1,4 @@
-package com.global.dev;
+package org.global.dev;
 
 /**
  * Hello world!
