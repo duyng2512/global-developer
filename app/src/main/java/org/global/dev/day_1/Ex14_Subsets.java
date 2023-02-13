@@ -8,8 +8,11 @@ import java.util.List;
  */
 public class Ex14_Subsets {
      
-     // https://leetcode.com/problems/subsets/description/
-     
+     /**
+      * https://leetcode.com/problems/subsets/description/
+      * Time: O(n)
+      * Space: O(1)
+      */
      
      static public List<List<Integer>> subsets(int[] nums) {
 	List<List<Integer>> result = new ArrayList<>();
