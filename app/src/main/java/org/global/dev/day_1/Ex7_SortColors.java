@@ -5,6 +5,12 @@ package org.global.dev.day_1;
  */
 public class Ex7_SortColors {
      
+     static void swap(int[] arr, int first, int second) {
+	int temp = arr[first];
+	arr[first] = arr[second];
+	arr[second] = temp;
+     }
+     
      /**
       * https://leetcode.com/problems/sort-colors/
       * Time: O(n)
@@ -49,11 +55,5 @@ public class Ex7_SortColors {
 		pivot--;
 	     }
 	}
-     }
-     
-     static void swap(int[] arr, int first, int second) {
-	int temp = arr[first];
-	arr[first] = arr[second];
-	arr[second] = temp;
      }
 }

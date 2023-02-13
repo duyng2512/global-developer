@@ -7,29 +7,6 @@ import org.global.dev.common.ListNode;
  */
 public class Ex10_ReverseLinkedList {
      
-     /**
-      * https://leetcode.com/problems/reverse-linked-list/
-      * Time: O(n)
-      * Space: O(1)
-      */
-     
-     public ListNode reverseList(ListNode head) {
-	
-	if (head == null) return null;
-	if (head.next == null) return head;
-	
-	ListNode prev = null;
-	
-	while (head != null) {
-	     ListNode temp = head.next;
-	     head.next = prev;
-	     prev = head;
-	     head = temp;
-	}
-	
-	return prev;
-     }
-     
      static public ListNode reverseListRecursive(ListNode head) {
 	if (head == null) return null;
 	if (head.next == null) return head;
@@ -57,5 +34,28 @@ public class Ex10_ReverseLinkedList {
 	root.next.next = new ListNode(3);
 	
 	reverseListRecursive(root);
+     }
+     
+     /**
+      * https://leetcode.com/problems/reverse-linked-list/
+      * Time: O(n)
+      * Space: O(1)
+      */
+     
+     public ListNode reverseList(ListNode head) {
+	
+	if (head == null) return null;
+	if (head.next == null) return head;
+	
+	ListNode prev = null;
+	
+	while (head != null) {
+	     ListNode temp = head.next;
+	     head.next = prev;
+	     prev = head;
+	     head = temp;
+	}
+	
+	return prev;
      }
 }

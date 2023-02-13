@@ -5,6 +5,12 @@ package org.global.dev.day_1;
  */
 public class Ex8_SortArrayByParity {
      
+     static void swap(int[] arr, int first, int second) {
+	int temp = arr[first];
+	arr[first] = arr[second];
+	arr[second] = temp;
+     }
+     
      /**
       * https://leetcode.com/problems/sort-array-by-parity/
       * Time: O(n)
@@ -28,11 +34,5 @@ public class Ex8_SortArrayByParity {
 	}
 	
 	return nums;
-     }
-     
-     static void swap(int[] arr, int first, int second) {
-	int temp = arr[first];
-	arr[first] = arr[second];
-	arr[second] = temp;
      }
 }

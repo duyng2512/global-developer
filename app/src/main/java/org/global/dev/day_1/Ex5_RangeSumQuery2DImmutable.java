@@ -10,12 +10,12 @@ public class Ex5_RangeSumQuery2DImmutable {
 	int[][] arr;
 	int row;
 	int col;
- 
+	
 	/**
 	 * https://leetcode.com/problems/range-sum-query-2d-immutable/description/
 	 * Intuitive just the same as 1D version but run each row
 	 */
-  
+	
 	/**
 	 * Time: O(n + m + q)
 	 * Space: O(n + m)
