@@ -26,8 +26,10 @@ public class Ex13_HappyNumber {
 	int fast = takeSquare(takeSquare(n));
 	
 	while (true) {
-	     if (slow == fast && fast != 1) return false;
-	     if (fast == 1) return true;
+	     if (slow == fast && fast != 1)
+		return false;
+	     if (fast == 1)
+		return true;
 	     
 	     slow = takeSquare(slow);
 	     fast = takeSquare(takeSquare(fast));
