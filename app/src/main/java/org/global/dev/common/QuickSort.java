@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class QuickSort {
      
-     private void quickSort(int[] arr, int begin, int end) {
+     public void quickSort(int[] arr, int begin, int end) {
 	if (begin < end) {
 	     int index = partition(arr, begin, end);
 	     quickSort(arr, begin, index - 1);
