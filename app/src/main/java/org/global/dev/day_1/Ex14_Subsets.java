@@ -13,31 +13,31 @@ public class Ex14_Subsets {
       * Time: O(n)
       * Space: O(1)
       */
-     
+
      static public List<List<Integer>> subsets(int[] nums) {
-	List<List<Integer>> result = new ArrayList<>();
+	     List<List<Integer>> result = new ArrayList<>();
 	
-	// Build bit map
-	int total = (int) Math.pow(2, nums.length);
-	List<String> bitMap = new ArrayList<>(total);
-	for (int i = 0; i < total; i++) {
-	     String binary = Integer.toBinaryString(i);
-	     bitMap.add("0".repeat(nums.length - binary.length()) + binary);
-	}
-	
-	for (int i = 0; i < total; i++) {
-	     
-	     List<Integer> temp = new ArrayList<>();
-	     String mask = bitMap.get(i);
-	     for (int j = 0; j < mask.length(); j++) {
-		if (mask.charAt(j) == '1') {
-		     temp.add(nums[j]);
-		}
+	     // Build bit map
+	     int total = (int) Math.pow(2, nums.length);
+	     List<String> bitMap = new ArrayList<>(total);
+	     for (int i = 0; i < total; i++) {
+		     String binary = Integer.toBinaryString(i);
+		     bitMap.add("0".repeat(nums.length - binary.length()) + binary);
 	     }
-	     result.add(temp);
-	}
 	
-	return result;
+	     for (int i = 0; i < total; i++) {
+		
+		     List<Integer> temp = new ArrayList<>();
+		     String mask = bitMap.get(i);
+		     for (int j = 0; j < mask.length(); j++) {
+			     if (mask.charAt(j) == '1') {
+				     temp.add(nums[j]);
+			     }
+		     }
+		     result.add(temp);
+	     }
+	
+	     return result;
      }
      
      public static void main(String[] args) {

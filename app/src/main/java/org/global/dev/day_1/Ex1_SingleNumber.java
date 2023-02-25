@@ -14,10 +14,10 @@ public class Ex1_SingleNumber {
       * Space: O(1)
       */
      public int singleNumber(int[] nums) {
-	int result = 0;
-	for (int num : nums) {
-	     result ^= num;
-	}
-	return result;
+	     int result = 0;
+	     for (int num : nums) {
+		     result ^= num;
+	     }
+	     return result;
      }
 }
