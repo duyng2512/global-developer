@@ -20,7 +20,13 @@ public class KClosestPointsToOrigin {
 	     {-2, 4}
 	};
 	System.out.println(Arrays.deepToString(origin.kClosest(arr, 2)));
-	
+     
+     }
+     
+     static void swap(double[] arr, int first, int second) {
+	double temp = arr[first];
+	arr[first] = arr[second];
+	arr[second] = temp;
      }
      
      public int[][] kClosest(int[][] points, int k) {
@@ -35,7 +41,7 @@ public class KClosestPointsToOrigin {
 	double smallestKDist = findKthSmallest(distances, k);
 	
 	List<int[]> list = new ArrayList<>();
- 
+	
 	for (int[] point : points) {
 	     double dist = Math.sqrt(Math.pow(point[0], 2) + Math.pow(point[1], 2));
 	     if (dist <= smallestKDist) {
@@ -51,7 +57,6 @@ public class KClosestPointsToOrigin {
 	
 	return result;
      }
-     
      
      // Finding kth smallest element
      public double findKthSmallest(double[] arr, int k) {
@@ -88,12 +93,6 @@ public class KClosestPointsToOrigin {
 	
 	swap(arr, end, loc);
 	return loc;
-     }
-     
-     static void swap(double[] arr, int first, int second) {
-	double temp = arr[first];
-	arr[first] = arr[second];
-	arr[second] = temp;
      }
      
 }

@@ -9,10 +9,10 @@ public class Ex2_PowerOfTwo {
       * Space: O(1)
       */
      public boolean isPowerOfTwo(int n) {
-          // Any number power of two is bigger than 0
-          if (n <= 0)
-               return false;
-          return (n & (n - 1)) == 0;
+	// Any number power of two is bigger than 0
+	if (n <= 0)
+	     return false;
+	return (n & (n - 1)) == 0;
      }
-
+     
 }

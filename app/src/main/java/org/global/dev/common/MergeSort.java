@@ -4,6 +4,13 @@ import java.util.Arrays;
 
 public class MergeSort {
      
+     public static void main(String[] args) {
+	MergeSort sort = new MergeSort();
+	int[] arr = {9, 1, 5, 4, 2};
+	int[] result = sort.mergeSort(arr, 0, arr.length - 1);
+	System.out.println(Arrays.toString(result));
+     }
+     
      public int[] mergeSort(int[] arr, int left, int right) {
 	
 	if (left == right) {
@@ -50,13 +57,6 @@ public class MergeSort {
 	     j++;
 	}
 	return sorted;
-     }
-     
-     public static void main(String[] args) {
-	MergeSort sort = new MergeSort();
-	int[] arr = {9, 1, 5, 4, 2};
-	int[] result = sort.mergeSort(arr, 0, arr.length - 1);
-	System.out.println(Arrays.toString(result));
      }
      
 }

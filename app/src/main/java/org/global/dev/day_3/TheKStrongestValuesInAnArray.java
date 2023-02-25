@@ -11,6 +11,12 @@ public class TheKStrongestValuesInAnArray {
 	System.out.println(Arrays.toString(anArray.getStrongest(new int[]{1, 1, 3, 5, 5}, 2)));
      }
      
+     static void swap(int[] arr, int first, int second) {
+	int temp = arr[first];
+	arr[first] = arr[second];
+	arr[second] = temp;
+     }
+     
      public int[] getStrongest(int[] arr, int k) {
 	int median = median(arr);
 	int[] strong = new int[arr.length];
@@ -85,11 +91,5 @@ public class TheKStrongestValuesInAnArray {
 	} else {
 	     return (arr[mid] + arr[mid - 1]) / 2;
 	}
-     }
-     
-     static void swap(int[] arr, int first, int second) {
-	int temp = arr[first];
-	arr[first] = arr[second];
-	arr[second] = temp;
      }
 }
