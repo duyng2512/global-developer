@@ -4,6 +4,11 @@ import java.util.Stack;
 
 public class RemoveAllAdjacentDuplicatesInString {
 	
+	/**
+	 * Input: s = "abbaca"
+	 * Output: "ca"
+	 *
+	 */
 	public String removeDuplicates(String s) {
 		Stack<Character> stack = new Stack<>();
 		stack.add(s.charAt(0));
