@@ -42,7 +42,8 @@ public class RemoveAllAdjacentDuplicatesInStringII {
 				prev = cur;
 			} else {
 				int pop = stack.pop();
-				stack.add(pop + 1); // Update last index
+				stack.add(pop + 1);
+				// Update last index
 				if (pop + 1 == k) {
 					stack.pop();
 					builder = new StringBuilder(builder.substring(0, builder.length() - k));

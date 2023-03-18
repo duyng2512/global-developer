@@ -72,7 +72,8 @@ public class InsertDeleteGetRandomO_1 {
 		boolean z = set.remove(0);
 		set.insert(2);
 		set.remove(1);
-		System.out.println(set.getRandom()); // expect 2
+		System.out.println(set.getRandom());
+		// expect 2
 	}
 	
 }

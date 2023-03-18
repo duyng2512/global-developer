@@ -10,6 +10,7 @@ public class Ex2_PowerOfTwo {
       */
      public boolean isPowerOfTwo(int n) {
 	     // Any number power of two is bigger than 0
+	     // Turn of last bit n & (n - 1)
 	     if (n <= 0)
 		     return false;
 	     return (n & (n - 1)) == 0;

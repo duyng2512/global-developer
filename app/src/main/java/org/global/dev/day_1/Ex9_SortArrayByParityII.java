@@ -18,15 +18,15 @@ public class Ex9_SortArrayByParityII {
 	 */
 	
 	public int[] sortArrayByParityII(int[] nums) {
-		int j = 1;
+		int pivot = 1;
 		for (int i = 0; i < nums.length; i += 2) {
 			if (nums[i] % 2 == 1) { // Odd wrong place
 				// Find the right place for i
 				// If the next still odd then increase
-				while (nums[j] % 2 == 1) {
-					j += 2;
+				while (nums[pivot] % 2 == 1) {
+					pivot += 2;
 				}
-				swap(nums, i, j);
+				swap(nums, i, pivot);
 			}
 		}
 		

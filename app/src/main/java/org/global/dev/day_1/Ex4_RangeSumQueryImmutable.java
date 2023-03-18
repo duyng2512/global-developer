@@ -6,6 +6,9 @@ package org.global.dev.day_1;
 public class Ex4_RangeSumQueryImmutable {
      
      /**
+      *
+      * Using prefix sum
+      *
       * Time: O(n + q)
       * Space: O(n)
       */
