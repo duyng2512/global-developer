@@ -31,6 +31,7 @@ public class MinimumGeneticMutation {
 	}
 	
 	public int minMutation(String startGene, String endGene, String[] bank) {
+		
 		Queue<String> queue = new ArrayDeque<>();
 		Set<String> visited = new HashSet<>();
 		visited.add(startGene);
@@ -38,21 +39,26 @@ public class MinimumGeneticMutation {
 		int count = 0;
 		
 		while (!queue.isEmpty()) {
-			String cur = queue.poll();
 			
-			List<String> mutations = getMutation(bank, cur, visited);
-			if (!mutations.isEmpty()) count++;
+			int nodesInQueue = queue.size();
 			
-			
-			System.out.println("Cur " + cur);
-			System.out.println("Mu " + mutations);
-			System.out.println("------");
-			
-			for (String mutation : mutations) {
-				if (mutation.equals(endGene)) return count;
-				queue.offer(mutation);
-				visited.add(mutation);
+			for (int i = 0; i < nodesInQueue; i++) {
+				String cur = queue.poll();
+				List<String> mutations = getMutation(bank, cur, visited);
+				
+				if (cur.equals(endGene)) return count;
+				
+				System.out.println("Cur " + cur);
+				System.out.println("Mu " + mutations);
+				System.out.println("------");
+				
+				for (String mutation : mutations) {
+					queue.offer(mutation);
+					visited.add(mutation);
+				}
 			}
+			
+			count++;
 			
 		}
 		return -1;
