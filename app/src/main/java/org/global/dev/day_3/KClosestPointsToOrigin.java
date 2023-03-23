@@ -73,12 +73,20 @@ public class KClosestPointsToOrigin {
 		if (partition == k - 1) {
 			return arr[partition];
 		} else if (partition < k - 1) {
+			// If partition < k meaning that the element we need to find is somewhere begin partition and end
 			return select(arr, partition + 1, end, k);
 		} else {
+			// If partition > k meaning that the element we need to find is somewhere begin start and partition
 			return select(arr, begin, partition - 1, k);
 		}
 	}
 	
+	// Example find 2nd smallest
+	// All element less than 5 will shift one place
+	// 7,  8,  4,  3,  5
+	// 4, 3, 7, 8, 5
+	// 4, 3, 5, 7, 8
+	// loc = 3
 	public int partition(double[] arr, int begin, int end) {
 		int loc = begin;
 		double val = arr[end];

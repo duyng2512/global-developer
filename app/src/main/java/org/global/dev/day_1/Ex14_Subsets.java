@@ -22,9 +22,12 @@ public class Ex14_Subsets {
 	     List<String> bitMap = new ArrayList<>(total);
 	     for (int i = 0; i < total; i++) {
 		     String binary = Integer.toBinaryString(i);
+			 
+			 // Padding "0"
 		     bitMap.add("0".repeat(nums.length - binary.length()) + binary);
 	     }
-	
+	     System.out.println(bitMap);
+		 
 	     for (int i = 0; i < total; i++) {
 		
 		     List<Integer> temp = new ArrayList<>();
